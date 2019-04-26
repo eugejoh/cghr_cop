@@ -1,0 +1,123 @@
+/* Add maven for code font (keep other xaringan defaults */
+                              @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+                            @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+                            
+                            @font-face {
+                              font-family: 'Open Sans';
+                              src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+                            }
+                            
+                            @font-face {
+                              font-family: 'Roboto Condensed';
+                              src: url('fonts/RobotoCondensed-Regular.ttf') format('truetype');
+                            }
+                            
+                            /*body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif; } */
+                              
+                              h1, h2, h3 {
+                                font-family: 'Roboto Condensed', sans-serif; /*comments */
+                                  font-weight: 475;
+                              }
+                            
+                            body {
+                              font-family: 'Open Sans', serif;
+                            }
+                            
+                            h4 {
+                              font-family: 'Roboto Condensed', sans-serif;
+                              font-size: 110%;
+                              font-weight: 400;
+                            }
+                            
+                            /*.remark-code, .remark-inline-code { font-family: 'Inconsolata', monospace; }*/
+                              /*.remark-code-line-highlighted     { background-color: #ffff88; }*/
+                                  
+                                  .remark-inline-code{
+                                    font-family: 'Inconsolata', monospace; 
+                                    background: #F5F5F5; /* lighter */
+                                      /* background: #e7e8e2; /* darker */
+                                      border-radius: 3px;
+                                    padding: 4px;
+                                  }
+                                
+                                /*add logo to bottom */
+                                  div.my-footer {
+                                    position: absolute;
+                                    bottom: 15px;
+                                    left:   15px;
+                                    height: 80px;
+                                    width: 80px;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    background-image: url("img/CGHR logo L.png");
+                                  }
+                                
+                                /* */
+                                  
+                                  .title-slide {
+                                    background-color: #1C1D19;
+                                      color: #d6d6d6;
+                                      text-shadow: 0 0 20px #333;
+                                    text-align: center
+                                  }
+                                
+                                .title-slide .remark-slide-number {
+                                  display: none;
+                                }
+                                
+                                .font120 {
+                                  font-size: 120%;
+                                }
+                                
+                                
+                                .red {
+                                  color: 'red';
+                                }
+                                
+                                img {
+                                  position: relative;
+                                  z-index: 100;
+                                }
+                                
+                                .img-top {
+                                  position: absolute;
+                                  margin-top: -150px;
+                                  margin-right: -50px;
+                                  height: 90%;
+                                }
+                                
+                                remark.macros.scale = function (percentage) {
+                                  var url = this;
+                                  return '<img src="' + url + '" style="width: ' + percentage + '" />';
+                                };
+                                
+                                .centre {
+                                  margin: auto;
+                                  width: 50%;
+                                  text-align: center;
+                                  padding: 10px;
+                                }
+                                
+                                .large { font-size: 130% }
+                                .small { font-size: 70% }
+                                
+                                
+                                table {
+                                  margin: auto;
+                                  border-top: 1px solid #666;
+                                  border-bottom: 1px solid #666;
+                                }
+                                table thead th { border-bottom: 1px solid #ddd; }
+                                  th, td { padding: 5px; }
+                                  tr:nth-child(even) { background: #eee }
+                                      
+                                      
+                                      /*li {list-style-type: circle;}*/
+                                      
+                                      a {
+                                        color: #e60000;
+                                      }
+                                    
+                                    fade {
+                                      color: #D3D3D3;
+                                    }
