@@ -11,7 +11,7 @@ rmarkdown::render(input = here::here("markdown", "first_meeting_20190502.Rmd"),
 # move file to slides
 if (!memes) {
   file.copy(
-    from = list.files(here::here("markdown"), pattern = "20190502.*\\.html$", full.names = TRUE),
+    from = list.files(here::here("markdown"), pattern = "first_meeting_20190502\\.html$", full.names = TRUE),
     to = here::here("docs", "slides"),
     overwrite = TRUE
   )

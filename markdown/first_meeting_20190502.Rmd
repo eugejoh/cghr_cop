@@ -53,13 +53,13 @@ Background:
  - Public Sector & Non-Profit
 
 CGHR Role:
- - Data Mangement (cleaning, geocoding)  
- - Data Analysis (malaria, baseline)  
+ - Data Management  
+ - Data Analysis  
 
 Interests:
  - Data Science + Public Health  
  - Vector-borne Diseases  
- - Disease Surveillance  
+ - One Health  
  - Spatial Epidemiology  
 ]
 
@@ -117,7 +117,7 @@ class: animated, fadeIn, faster
 
 ]
 ???
-So you might ask, we call it a CoP or creat one?
+So you might ask, we call it a CoP or create one?
 
 The bottom line is that these meetings will be a place where we can informally share useful information, ask and answer questions together (there is no such thing as a dumb question), basic respect for one another.
 
@@ -240,7 +240,7 @@ class: middle, title-slide, animated, fadeIn, faster
 
 
 ???
-You can generally break up a data workflow into separate catagories
+You can generally break up a data workflow into separate categories
 
 This frame work is really easy way to think about any research project
 
@@ -286,7 +286,7 @@ class: middle, title-slide, animated, fadeIn, faster
 ![](img/ge_article.jpg)
 
 ???
-The authours recognized this as time is a precious commodity, and this article they wrote touches on the bare-minimum requirements to conduct scienfitic analysis well. I recommend reading this article!
+The authours recognized this as time is a precious commodity, and this article they wrote touches on the bare-minimum requirements to conduct scientific analysis well. I recommend reading this article!
 
 ---
 class: animate, fadeIn, faster
@@ -390,7 +390,7 @@ This can all be stored in a **README** file or document
 ???
 So data management is important because when you don't do it, it will bite you back in an year or two when you don't remember all the details regarding the data.
 
-So following the "good enough" princples, we should be documenting these 5 things listed below.
+So following the "good enough" principles, we should be documenting these 5 things listed below.
 
 brief description of the dataset
 where you obtained the data, the source(website, MoU, collaborator)
@@ -658,7 +658,7 @@ identical(l_data, l_data_pipe)
 ]
 
 ???
-so we accomplished all the processing in separate steps or lines of code. `dplyr` contains a pipe operator that allows to chain muliple functions together and make it really easy to write and read the code that does all the processing!
+so we accomplished all the processing in separate steps or lines of code. `dplyr` contains a pipe operator that allows to chain multiple functions together and make it really easy to write and read the code that does all the processing!
 
 When I first learned about this, it literally blew my mind and has made it easier for me to read and understand my own code
 
