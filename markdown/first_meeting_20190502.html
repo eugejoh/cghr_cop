@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>first_meeting_20190502.utf8.md</title>
     <meta charset="utf-8">
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="my-theme.css" type="text/css" />
@@ -17,7 +17,8 @@ class: middle, title-slide, animated, fadeIn, faster
 # R Tutorials and Community of Practice
 ## Centre for Global Health Research
 
-#### 2019-04-26
+#### 2019-05-02
+&lt;!-- 'r Sys.Date() --&gt;
 
 &lt;!-- ### Eugene Joh --&gt;
 
@@ -39,8 +40,8 @@ Background:
  - Public Sector &amp; Non-Profit
 
 CGHR Role:
- - Data Management  
- - Data Analysis
+ - Data Mangement (cleaning, geocoding)  
+ - Data Analysis (malaria, baseline)  
 
 Interests:
  - Data Science + Public Health  
@@ -50,8 +51,9 @@ Interests:
 ]
 
 .pull-right[
+&lt;br&gt;
 &lt;center&gt;
-&lt;img src="https://avatars3.githubusercontent.com/u/24900779?s=460&amp;v=4" width="280px" /&gt;
+&lt;img src="https://avatars3.githubusercontent.com/u/24900779?s=460&amp;v=4" width="250px" /&gt;
 &lt;br&gt;
 .small[*Eugene Joh*]&lt;/center&gt;
 ]
@@ -191,11 +193,12 @@ Next two meetings will be tutorials on...
 .pull-left[Today will be a presentation on...
  - .large[Data Workflow Walkthrough]  
  
-Code and Slides: **github link**
+Code and Slides: [**GitHub Page**](https://eugejoh.github.io/cghr_cop/)
 ]
 --
 .pull-right[
-![](https://media.giphy.com/media/K72vGV2B0GC5y/giphy.gif)
+
+
 ]
 ???
 The tutorials will be created to be within the context of CGHR and be (hopefully) useful for staff for their everyday.
@@ -335,7 +338,7 @@ class: middle, title-slide, animate, fadeIn, faster
 
 ---
 class: middle, title-slide, animate, fadeIn, faster
-![](https://media.giphy.com/media/3s39mJ7zXU94mfAq4W/giphy.gif)
+
 
 ???
 but wait..
@@ -403,9 +406,8 @@ class: animated, fadeIn, faster
 &lt;br&gt;
 
 &lt;center&gt;
-&lt;img src="img/sheep.gif" width="400px" /&gt;
+
 &lt;br&gt;
-.small[*Shaun the Sheep*]&lt;/center&gt;
 ]
 
 ???
@@ -457,7 +459,7 @@ the_file
 ```
 
 ```
-## [1] "/Users/eugenejoh/Documents/GitHub/cghr_cop/data/MALARIA001.csv"
+## [1] "E:/GitHub Repos/cghr_cop/data/MALARIA001.csv"
 ```
 --
 
@@ -478,15 +480,15 @@ head(my_data, 5)
 ```
 ## # A tibble: 5 x 19
 ##   Country `2017` `2016` `2015` `2014` `2013` `2012` `2011` `2010` `2009`
-##   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-## 1 Afghan…     10     47     49     32     24     36     40     22     32
+##   &lt;chr&gt;    &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;
+## 1 Afghan~     10     47     49     32     24     36     40     22     32
 ## 2 Algeria      0      0      0      0      0      0      0      1      0
 ## 3 Angola   13967  15997   7832   5714   7300   5736   6909   8114  10530
-## 4 Argent…      1      0      0      0      0      0      0      0      0
+## 4 Argent~      1      0      0      0      0      0      0      0      0
 ## 5 Armenia     NA      0      0      0      0      0      0      0      0
-## # … with 9 more variables: `2008` &lt;dbl&gt;, `2007` &lt;dbl&gt;, `2006` &lt;dbl&gt;,
-## #   `2005` &lt;dbl&gt;, `2004` &lt;dbl&gt;, `2003` &lt;dbl&gt;, `2002` &lt;dbl&gt;, `2001` &lt;dbl&gt;,
-## #   `2000` &lt;dbl&gt;
+## # ... with 9 more variables: `2008` &lt;int&gt;, `2007` &lt;int&gt;, `2006` &lt;int&gt;,
+## #   `2005` &lt;int&gt;, `2004` &lt;int&gt;, `2003` &lt;int&gt;, `2002` &lt;int&gt;, `2001` &lt;int&gt;,
+## #   `2000` &lt;int&gt;
 ```
 
 ```r
@@ -553,7 +555,7 @@ head(l_data, 3) #sanity check 1
 ```
 ## # A tibble: 3 x 3
 ##   Country     Year  Deaths
-##   &lt;chr&gt;       &lt;chr&gt;  &lt;dbl&gt;
+##   &lt;chr&gt;       &lt;chr&gt;  &lt;int&gt;
 ## 1 Afghanistan 2017      10
 ## 2 Algeria     2017       0
 ## 3 Angola      2017   13967
@@ -584,7 +586,7 @@ head(l_data, 3)
 ```
 ## # A tibble: 3 x 3
 ##   Country     Year  Deaths
-##   &lt;chr&gt;       &lt;chr&gt;  &lt;dbl&gt;
+##   &lt;chr&gt;       &lt;chr&gt;  &lt;int&gt;
 ## 1 Afghanistan 2017      10
 ## 2 Algeria     2017       0
 ## 3 Angola      2017   13967
@@ -617,7 +619,7 @@ head(l_data, 3)
 ```
 ## # A tibble: 3 x 3
 ##   Country      Year Deaths
-##   &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;
+##   &lt;chr&gt;       &lt;dbl&gt;  &lt;int&gt;
 ## 1 Afghanistan  2017     10
 ## 2 Algeria      2017      0
 ## 3 Angola       2017  13967
@@ -688,7 +690,7 @@ l_data &lt;- filter(l_data, Country %in% my_countries)
 ```
 ## # A tibble: 44 x 3
 ##    Country       Year Deaths
-##    &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;
+##    &lt;chr&gt;        &lt;dbl&gt;  &lt;int&gt;
 ##  1 Ethiopia      2017    356
 ##  2 India         2017    194
 ##  3 Mozambique    2017   1114
@@ -699,7 +701,7 @@ l_data &lt;- filter(l_data, Country %in% my_countries)
 ##  8 Sierra Leone  2016   1345
 ##  9 Ethiopia      2015    662
 ## 10 India         2015    384
-## # … with 34 more rows
+## # ... with 34 more rows
 ```
 
 ???
@@ -743,7 +745,7 @@ When I first learned about this, it literally blew my mind and has made it easie
 .pull-right[
 &lt;br&gt;
 &lt;center&gt;
-&lt;img src="img/thumbs.gif" width="300px" /&gt;
+
 &lt;br&gt;
 ]
 
@@ -762,7 +764,7 @@ class: animate, fadeIn, faster
 .pull-left[
 R has great built-in functionality and packages for creating plots:
  - Base R Graphics: [Introduction](https://rstudio-pubs-static.s3.amazonaws.com/7953_4e3efd5b9415444ca065b1167862c349.html)  
- - `ggplot2`: Next tutorial!  
+ - `ggplot2`: **Next meeting!**  
  - `plotly`: [Interactive visualizations](https://plot.ly/r/)   
  - `gganimate`: [animations](https://github.com/thomasp85/gganimate#yet-another-example)
 
@@ -801,113 +803,8 @@ the code is available for this visualization in the R script that I shared for t
 
 ---
 
+&lt;img src="img/malaria.gif" style="display: block; margin: auto;" /&gt;
 
-```
-## 
-Frame 1 (1%)
-Frame 2 (2%)
-Frame 3 (3%)
-Frame 4 (4%)
-Frame 5 (5%)
-Frame 6 (6%)
-Frame 7 (7%)
-Frame 8 (8%)
-Frame 9 (9%)
-Frame 10 (10%)
-Frame 11 (11%)
-Frame 12 (12%)
-Frame 13 (13%)
-Frame 14 (14%)
-Frame 15 (15%)
-Frame 16 (16%)
-Frame 17 (17%)
-Frame 18 (18%)
-Frame 19 (19%)
-Frame 20 (20%)
-Frame 21 (21%)
-Frame 22 (22%)
-Frame 23 (23%)
-Frame 24 (24%)
-Frame 25 (25%)
-Frame 26 (26%)
-Frame 27 (27%)
-Frame 28 (28%)
-Frame 29 (29%)
-Frame 30 (30%)
-Frame 31 (31%)
-Frame 32 (32%)
-Frame 33 (33%)
-Frame 34 (34%)
-Frame 35 (35%)
-Frame 36 (36%)
-Frame 37 (37%)
-Frame 38 (38%)
-Frame 39 (39%)
-Frame 40 (40%)
-Frame 41 (41%)
-Frame 42 (42%)
-Frame 43 (43%)
-Frame 44 (44%)
-Frame 45 (45%)
-Frame 46 (46%)
-Frame 47 (47%)
-Frame 48 (48%)
-Frame 49 (49%)
-Frame 50 (50%)
-Frame 51 (51%)
-Frame 52 (52%)
-Frame 53 (53%)
-Frame 54 (54%)
-Frame 55 (55%)
-Frame 56 (56%)
-Frame 57 (57%)
-Frame 58 (58%)
-Frame 59 (59%)
-Frame 60 (60%)
-Frame 61 (61%)
-Frame 62 (62%)
-Frame 63 (63%)
-Frame 64 (64%)
-Frame 65 (65%)
-Frame 66 (66%)
-Frame 67 (67%)
-Frame 68 (68%)
-Frame 69 (69%)
-Frame 70 (70%)
-Frame 71 (71%)
-Frame 72 (72%)
-Frame 73 (73%)
-Frame 74 (74%)
-Frame 75 (75%)
-Frame 76 (76%)
-Frame 77 (77%)
-Frame 78 (78%)
-Frame 79 (79%)
-Frame 80 (80%)
-Frame 81 (81%)
-Frame 82 (82%)
-Frame 83 (83%)
-Frame 84 (84%)
-Frame 85 (85%)
-Frame 86 (86%)
-Frame 87 (87%)
-Frame 88 (88%)
-Frame 89 (89%)
-Frame 90 (90%)
-Frame 91 (91%)
-Frame 92 (92%)
-Frame 93 (93%)
-Frame 94 (94%)
-Frame 95 (95%)
-Frame 96 (96%)
-Frame 97 (97%)
-Frame 98 (98%)
-Frame 99 (99%)
-Frame 100 (100%)
-## Finalizing encoding... done!
-```
-
-![](img/malaria.gif)
 ---
 name: take_away
 class: animate, fadeIn, inverse, faster, title-slide, left
@@ -940,20 +837,6 @@ Data Workflows in R: [Project-oriented Workflows](https://www.tidyverse.org/arti
 --
 
 Increasing Efficiency: [R Programming](https://csgillespie.github.io/efficientR/programming.html#top-5-tips-for-efficient-programming)  
-
----
-name: last
-class: animate, fadeIn, faster, middle
-exclude: false
-
-### Administrative Notes:
-
-- Frequency of meetings (every 1/2/4 months?)
-- Topics that **you** would like to share or present?  
-- Datasets that **you** are interested in exploring?  
-
-&lt;br&gt;
-
 
 ---
 class: animate, fadeIn, faster
@@ -1018,7 +901,21 @@ exclude: true
 #### Even Deeper Dive:
  - [Advanced R Book: Data Structures chapter](http://adv-r.had.co.nz/Data-structures.html)   
 ]
+
+---
+name: last
+class: animate, fadeIn, faster, middle
+exclude: false
+
+### Administrative Notes
+
+- Frequency of meetings (every 1/2/4 months?)
+- Topics that **you** would like to share or present?  
+- Datasets that **you** are interested in exploring?  
+
+&lt;br&gt;
     </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script src="https://platform.twitter.com/widgets.js"></script>
 <script>var slideshow = remark.create({
@@ -1032,11 +929,41 @@ exclude: true
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function() {
-  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
 })();</script>
 
 <script>
@@ -1051,8 +978,8 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
 </script>
 
 <script>
-(function() {
-  var i, text, code, codes = document.getElementsByTagName('code');
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
   for (i = 0; i < codes.length;) {
     code = codes[i];
     if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
@@ -1066,7 +993,8 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     i++;
   }
-})();
+};
+slideshow._releaseMath(document);
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

@@ -15,6 +15,9 @@ output:
       ratio: 16:9
       countIncrementalSlides: false
       slideNumberFormat: "%current%"
+params:
+  memes: false
+  ani: false
 ---
 ```{r, include=FALSE}
 options(readr.num_columns = 0)
@@ -27,7 +30,8 @@ class: middle, title-slide, animated, fadeIn, faster
 # R Tutorials and Community of Practice
 ## Centre for Global Health Research
 
-#### `r Sys.Date()`
+#### 2019-05-02
+<!-- 'r Sys.Date() -->
 
 <!-- ### Eugene Joh -->
 
@@ -49,8 +53,8 @@ Background:
  - Public Sector & Non-Profit
 
 CGHR Role:
- - Data Management  
- - Data Analysis
+ - Data Mangement (cleaning, geocoding)  
+ - Data Analysis (malaria, baseline)  
 
 Interests:
  - Data Science + Public Health  
@@ -60,8 +64,9 @@ Interests:
 ]
 
 .pull-right[
+<br>
 <center>
-```{r echo=FALSE, out.width = "280px"}
+```{r echo=FALSE, out.width = "250px"}
 knitr::include_graphics("https://avatars3.githubusercontent.com/u/24900779?s=460&v=4")
 ```
 <br>
@@ -203,11 +208,14 @@ Next two meetings will be tutorials on...
 .pull-left[Today will be a presentation on...
  - .large[Data Workflow Walkthrough]  
  
-Code and Slides: **github link**
+Code and Slides: [**GitHub Page**](https://eugejoh.github.io/cghr_cop/)
 ]
 --
 .pull-right[
-![](https://media.giphy.com/media/K72vGV2B0GC5y/giphy.gif)
+```{r echo=FALSE, eval=params$memes}
+knitr::include_graphics("https://media.giphy.com/media/K72vGV2B0GC5y/giphy.gif")
+```
+
 ]
 ???
 The tutorials will be created to be within the context of CGHR and be (hopefully) useful for staff for their everyday.
@@ -349,7 +357,9 @@ class: middle, title-slide, animate, fadeIn, faster
 
 ---
 class: middle, title-slide, animate, fadeIn, faster
-![](https://media.giphy.com/media/3s39mJ7zXU94mfAq4W/giphy.gif)
+```{r echo=FALSE, eval=params$memes}
+knitr::include_graphics("https://media.giphy.com/media/3s39mJ7zXU94mfAq4W/giphy.gif")
+```
 
 ???
 but wait..
@@ -417,11 +427,10 @@ class: animated, fadeIn, faster
 <br>
 
 <center>
-```{r echo=FALSE, out.width = "400px"}
+```{r echo=FALSE, out.width = "400px", eval=params$memes}
 knitr::include_graphics("img/sheep.gif")
 ```
 <br>
-.small[*Shaun the Sheep*]</center>
 ]
 
 ???
@@ -657,7 +666,7 @@ When I first learned about this, it literally blew my mind and has made it easie
 .pull-right[
 <br>
 <center>
-```{r echo=FALSE, out.width = "300px"}
+```{r echo=FALSE, out.width = "300px", eval=params$memes}
 knitr::include_graphics("img/thumbs.gif")
 ```
 <br>
@@ -678,7 +687,7 @@ class: animate, fadeIn, faster
 .pull-left[
 R has great built-in functionality and packages for creating plots:
  - Base R Graphics: [Introduction](https://rstudio-pubs-static.s3.amazonaws.com/7953_4e3efd5b9415444ca065b1167862c349.html)  
- - `ggplot2`: Next tutorial!  
+ - `ggplot2`: **Next meeting!**  
  - `plotly`: [Interactive visualizations](https://plot.ly/r/)   
  - `gganimate`: [animations](https://github.com/thomasp85/gganimate#yet-another-example)
 
@@ -737,8 +746,8 @@ the code is available for this visualization in the R script that I shared for t
 ---
 
 ```{r fig.width = 13, fig.height = 8, echo=FALSE, warning=FALSE, fig.retina = 2, fig.align='center', message=FALSE}
-
-p <- l_data %>% 
+if (params$ani) {
+  p <- l_data %>% 
   ggplot(aes(x = Year, y = Deaths, colour = Country, group = Country)) +
   geom_point() +
   geom_line(size = 1.2, alpha = 0.9) +
@@ -757,9 +766,13 @@ p_ani <- gganimate::animate(plot = p, width = 13*96, height = 8*96)
 
 gganimate::anim_save(here::here("markdown", "img", "malaria.gif"),
                      animation = p_ani)
+}
+
+if (!params$ani) {
+  knitr::include_graphics("img/malaria.gif")
+}
 ```
 
-![](img/malaria.gif)
 ---
 name: take_away
 class: animate, fadeIn, inverse, faster, title-slide, left
@@ -792,20 +805,6 @@ Data Workflows in R: [Project-oriented Workflows](https://www.tidyverse.org/arti
 --
 
 Increasing Efficiency: [R Programming](https://csgillespie.github.io/efficientR/programming.html#top-5-tips-for-efficient-programming)  
-
----
-name: last
-class: animate, fadeIn, faster, middle
-exclude: false
-
-### Administrative Notes:
-
-- Frequency of meetings (every 1/2/4 months?)
-- Topics that **you** would like to share or present?  
-- Datasets that **you** are interested in exploring?  
-
-<br>
-
 
 ---
 class: animate, fadeIn, faster
@@ -871,4 +870,15 @@ exclude: true
  - [Advanced R Book: Data Structures chapter](http://adv-r.had.co.nz/Data-structures.html)   
 ]
 
+---
+name: last
+class: animate, fadeIn, faster, middle
+exclude: false
 
+### Administrative Notes
+
+- Frequency of meetings (every 1/2/4 months?)
+- Topics that **you** would like to share or present?  
+- Datasets that **you** are interested in exploring?  
+
+<br>
