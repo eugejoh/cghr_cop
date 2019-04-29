@@ -3,7 +3,7 @@
 
 library(here)
 library(rmarkdown)
-memes <- TRUE
+memes <- FALSE
 # render markdown presentation
 rmarkdown::render(input = here::here("markdown", "first_meeting_20190502.Rmd"), 
                   params = list(memes=memes, ani=FALSE))
