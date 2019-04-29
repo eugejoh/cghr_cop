@@ -1,28 +1,15 @@
----
-output:
-  xaringan::moon_reader:
-    seal: false
-    lib_dir: libs
-    css: 
-      - default
-      - my-theme.css
-      # - "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
-    nature:
-      highlightStyle: github
-      beforeInit: "https://platform.twitter.com/widgets.js"
-      highlightLines: true
-      highlightSpans: false
-      ratio: 16:9
-      countIncrementalSlides: false
-      slideNumberFormat: "%current%"
-params:
-  memes: false
-  ani: false
----
-```{r, include=FALSE}
-options(readr.num_columns = 0)
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
-```
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>first_meeting_20190502.utf8.md</title>
+    <meta charset="utf-8">
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
 
 name: title_slide
 class: middle, title-slide, animated, fadeIn, faster
@@ -31,11 +18,11 @@ class: middle, title-slide, animated, fadeIn, faster
 ## Centre for Global Health Research
 
 #### 2019-05-02
-<!-- 'r Sys.Date() -->
+&lt;!-- 'r Sys.Date() --&gt;
 
-<!-- ### Eugene Joh -->
+&lt;!-- ### Eugene Joh --&gt;
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+&lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"&gt;
 
 ???
 Kick off first of (hopefully) more R and data-related tutorials. Looking at the title, but I think it will be more appropriate to call these "meeting" our community of practice. CoP is something I'll discuss a bit further today.
@@ -50,7 +37,7 @@ exclude: false
 .pull-left[
 **Background:**
  - MS/MPH (Environmental Health)  
- - Public Sector & Non-Profit
+ - Public Sector &amp; Non-Profit
 
 **CGHR Role:**
  - Data Management  
@@ -64,31 +51,29 @@ exclude: false
 ]
 
 .pull-right[
-<br>
-<center>
-```{r echo=FALSE, out.width = "240px"}
-knitr::include_graphics("https://avatars3.githubusercontent.com/u/24900779?s=460&v=4")
-```
-<br>
-<span style="font-size:1em; color: #2D2D2D;">
-<i class="fab fa-twitter fa-lg red"></i> <a href="https://twitter.com/eugejoh">eugejoh</a>
-<br>
-<i class="fab fa-github fa-lg red"></i> <a href="https://github.com/eugejoh">eugejoh</a>
-</span>
-<br> 
-</center>
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="https://avatars3.githubusercontent.com/u/24900779?s=460&amp;v=4" width="240px" /&gt;
+&lt;br&gt;
+&lt;span style="font-size:1em; color: #2D2D2D;"&gt;
+&lt;i class="fab fa-twitter fa-lg red"&gt;&lt;/i&gt; &lt;a href="https://twitter.com/eugejoh"&gt;eugejoh&lt;/a&gt;
+&lt;br&gt;
+&lt;i class="fab fa-github fa-lg red"&gt;&lt;/i&gt; &lt;a href="https://github.com/eugejoh"&gt;eugejoh&lt;/a&gt;
+&lt;/span&gt;
+&lt;br&gt; 
+&lt;/center&gt;
 ]
 
 ---
 name: what_cop
 class: animated, fadeIn, faster
-<center><h2>What is a Community of Practice (CoP)?</h2></center>
+&lt;center&gt;&lt;h2&gt;What is a Community of Practice (CoP)?&lt;/h2&gt;&lt;/center&gt;
 
-<br>
-<br>
-<center><h3>Definition:</h3>
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;&lt;h3&gt;Definition:&lt;/h3&gt;
 
-.large[<b>A group of people who share a craft or a profession</b><sup>1</sup>]</center>
+.large[&lt;b&gt;A group of people who share a craft or a profession&lt;/b&gt;&lt;sup&gt;1&lt;/sup&gt;]&lt;/center&gt;
 
 .footnote[[1] Lave and Wegner, 1991]
 
@@ -102,12 +87,12 @@ class: animated, fadeIn, faster
 ## Why create a Community of Practice?
 
 .pull-left[
-<b>Environment for Sharing:</b>  
+&lt;b&gt;Environment for Sharing:&lt;/b&gt;  
  - Useful tips  
  - Best practices  
  - Questions/Answers  
 
-<b>Expectations:</b>  
+&lt;b&gt;Expectations:&lt;/b&gt;  
  - Open and informal  
  - Ask questions  
  - Listen  
@@ -116,9 +101,9 @@ class: animated, fadeIn, faster
 
 --
 .pull-right[
-<center>
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/allison_horst/status/1102447015248637953">11. February 2015</a></blockquote>
-</center>
+&lt;center&gt;
+&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;&lt;a href="https://twitter.com/allison_horst/status/1102447015248637953"&gt;11. February 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;/center&gt;
 
 
 ]
@@ -209,7 +194,7 @@ Next two meetings will be tutorials on...
  - .large[Data Visualization using `ggplot2`]  
  - .large[Vectorizing R Code (loops, `apply`, `purrr` package)]  
 
-<br>
+&lt;br&gt;
 --
 .pull-left[Today will be a presentation on...
  - .large[Data Workflow Walkthrough]  
@@ -218,9 +203,7 @@ Code and Slides: [**GitHub Page**](https://eugejoh.github.io/cghr_cop/)
 ]
 --
 .pull-right[
-```{r echo=FALSE, eval=params$memes}
-knitr::include_graphics("https://media.giphy.com/media/K72vGV2B0GC5y/giphy.gif")
-```
+
 
 ]
 ???
@@ -242,7 +225,7 @@ class: middle, title-slide, animated, fadeIn, faster
 
 --
 ![](https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png)  
-.small[*R for Data Science (Hadley Wickham & Garrett Grolemund)*]
+.small[*R for Data Science (Hadley Wickham &amp; Garrett Grolemund)*]
 
 
 ???
@@ -342,14 +325,12 @@ class: animated, fadeIn, faster
 
 ]
 .pull-right[
-<br>
+&lt;br&gt;
 
-<center>
-```{r echo=FALSE, out.width = "400px"}
-knitr::include_graphics("img/anopheles_gambiae.jpg")
-```
-<br>
-.small[*Anopheles gambiae*]</center>
+&lt;center&gt;
+&lt;img src="img/anopheles_gambiae.jpg" width="400px" /&gt;
+&lt;br&gt;
+.small[*Anopheles gambiae*]&lt;/center&gt;
 ]
 
 ???
@@ -363,9 +344,7 @@ class: middle, title-slide, animate, fadeIn, faster
 
 ---
 class: middle, title-slide, animate, fadeIn, faster
-```{r echo=FALSE, eval=params$memes}
-knitr::include_graphics("https://media.giphy.com/media/3s39mJ7zXU94mfAq4W/giphy.gif")
-```
+
 
 ???
 but wait..
@@ -388,7 +367,7 @@ Document a **minimum amount** of information about our data
  4. Date Acquired  
  5. Person who obtained the data
  
-<br>
+&lt;br&gt;
  
 --
 This can all be stored in a **README** file or document
@@ -430,13 +409,11 @@ class: animated, fadeIn, faster
 --
 
 .pull-right[
-<br>
+&lt;br&gt;
 
-<center>
-```{r echo=FALSE, out.width = "400px", eval=params$memes}
-knitr::include_graphics("img/sheep.gif")
-```
-<br>
+&lt;center&gt;
+
+&lt;br&gt;
 ]
 
 ???
@@ -468,24 +445,32 @@ Questions to ask...
 **`read_csv()`**
 
 --
-```{r message=FALSE}
+
+```r
 library(here)
 library(readr)
 ```
 
-```{r}
-file_name <- "MALARIA001"
+
+```r
+file_name &lt;- "MALARIA001"
 ```
 --
-```{r}
-the_file <- list.files(path = here::here("data"), 
+
+```r
+the_file &lt;- list.files(path = here::here("data"), 
                        pattern = paste0(file_name, "\\.csv"),
                        full.names = TRUE)
 the_file
 ```
+
+```
+## [1] "E:/GitHub Repos/cghr_cop/data/MALARIA001.csv"
+```
 --
-```{r}
-my_data <- readr::read_csv(file = the_file, skip = 1)
+
+```r
+my_data &lt;- readr::read_csv(file = the_file, skip = 1)
 ```
 
 ---
@@ -493,10 +478,31 @@ class: animate, fadeIn, faster
 highlightSpans: false
 # Data Import
 
-```{r}
-head(my_data, 5)
 
+```r
+head(my_data, 5)
+```
+
+```
+## # A tibble: 5 x 19
+##   Country `2017` `2016` `2015` `2014` `2013` `2012` `2011` `2010` `2009`
+##   &lt;chr&gt;    &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;
+## 1 Afghan~     10     47     49     32     24     36     40     22     32
+## 2 Algeria      0      0      0      0      0      0      0      1      0
+## 3 Angola   13967  15997   7832   5714   7300   5736   6909   8114  10530
+## 4 Argent~      1      0      0      0      0      0      0      0      0
+## 5 Armenia     NA      0      0      0      0      0      0      0      0
+## # ... with 9 more variables: `2008` &lt;int&gt;, `2007` &lt;int&gt;, `2006` &lt;int&gt;,
+## #   `2005` &lt;int&gt;, `2004` &lt;int&gt;, `2003` &lt;int&gt;, `2002` &lt;int&gt;, `2001` &lt;int&gt;,
+## #   `2000` &lt;int&gt;
+```
+
+```r
 dim(my_data)
+```
+
+```
+## [1] 105  19
 ```
 
 ---
@@ -512,13 +518,14 @@ class: animate, fadeIn, faster
 3. Filter for 2007 to 2017 period  
 4. Filter for certain countries  
 
-<br>
+&lt;br&gt;
 --
 .large[How can we do this in R?] 
 --
 .large[**More packages!**]
 --
-```{r message=FALSE}
+
+```r
 # part of the tidyverse
 library(dplyr)
 library(tidyr)
@@ -536,18 +543,36 @@ our objectives to answer the research question on the trends of malaria deaths, 
 class: animate, fadeIn, faster
 ## 1. Reshape Data
 We want to "gather" all the columns (2000, 2001, ..., 2017) into a single `Year` column
-<br>
+&lt;br&gt;
 --
-<br>
+&lt;br&gt;
 We can use `gather` from the `tidyr` package!
 --
-```{r}
-l_data <- gather(my_data, "Year", "Deaths", -"Country")
+
+```r
+l_data &lt;- gather(my_data, "Year", "Deaths", -"Country")
 ```
 --
-```{r}
+
+```r
 head(l_data, 3) #sanity check 1
+```
+
+```
+## # A tibble: 3 x 3
+##   Country     Year  Deaths
+##   &lt;chr&gt;       &lt;chr&gt;  &lt;int&gt;
+## 1 Afghanistan 2017      10
+## 2 Algeria     2017       0
+## 3 Angola      2017   13967
+```
+
+```r
 dim(l_data) #old dim() was 105 19
+```
+
+```
+## [1] 1890    3
 ```
 
 ???
@@ -559,8 +584,18 @@ class: animate, fadeIn, faster
 First we'll check the data types for each column
 
 --
-```{r}
+
+```r
 head(l_data, 3)
+```
+
+```
+## # A tibble: 3 x 3
+##   Country     Year  Deaths
+##   &lt;chr&gt;       &lt;chr&gt;  &lt;int&gt;
+## 1 Afghanistan 2017      10
+## 2 Algeria     2017       0
+## 3 Angola      2017   13967
 ```
 
 --
@@ -572,17 +607,28 @@ class: animate, fadeIn, faster
 ## 2. Data Types
 
 We want to "change" the `Year` column to a `numeric` data type
-<br>
+&lt;br&gt;
 --
-<br>
+&lt;br&gt;
 We can use `mutate` from the `dplyr` package!
 --
-```{r}
-l_data <- mutate(l_data, Year = as.numeric(Year))
+
+```r
+l_data &lt;- mutate(l_data, Year = as.numeric(Year))
 ```
 --
-```{r}
+
+```r
 head(l_data, 3)
+```
+
+```
+## # A tibble: 3 x 3
+##   Country      Year Deaths
+##   &lt;chr&gt;       &lt;dbl&gt;  &lt;int&gt;
+## 1 Afghanistan  2017     10
+## 2 Algeria      2017      0
+## 3 Angola       2017  13967
 ```
 
 ???
@@ -594,21 +640,32 @@ we look at the `l_data` we just assigned and now it's a numeric "double" type
 class: animate, fadeIn, faster
 ## 3. Filter Years
 Next we want to "filter" years from 2007 and up
-<br>
+&lt;br&gt;
 --
-<br>
+&lt;br&gt;
 We can use `filter` from the `dplyr` package!
 --
-```{r}
+
+```r
 range(l_data$Year) #range of years
 ```
---
-```{r}
-l_data <- filter(l_data, Year >= 2007)
+
+```
+## [1] 2000 2017
 ```
 --
-```{r}
+
+```r
+l_data &lt;- filter(l_data, Year &gt;= 2007)
+```
+--
+
+```r
 range(l_data$Year) #sanity check 2
+```
+
+```
+## [1] 2007 2017
 ```
 
 ???
@@ -623,18 +680,34 @@ class: animate, fadeIn, faster
 ## 4. Filter Countries
 And finally "filter" the countries we want
 --
-```{r eval=FALSE}
-l_data <- filter(l_data, Country == "Sierra Leone" & Country == "Mozambique" & Country == "Ethiopia" & Country == "India")
+
+```r
+l_data &lt;- filter(l_data, Country == "Sierra Leone" &amp; Country == "Mozambique" &amp; Country == "Ethiopia" &amp; Country == "India")
 ```
 --
-```{r}
-my_countries <- c("Sierra Leone", "Mozambique", "Ethiopia", "India")
-l_data <- filter(l_data, Country %in% my_countries)
+
+```r
+my_countries &lt;- c("Sierra Leone", "Mozambique", "Ethiopia", "India")
+l_data &lt;- filter(l_data, Country %in% my_countries)
 ```
 
 --
-```{r echo=FALSE}
-l_data
+
+```
+## # A tibble: 44 x 3
+##    Country       Year Deaths
+##    &lt;chr&gt;        &lt;dbl&gt;  &lt;int&gt;
+##  1 Ethiopia      2017    356
+##  2 India         2017    194
+##  3 Mozambique    2017   1114
+##  4 Sierra Leone  2017   1298
+##  5 Ethiopia      2016    510
+##  6 India         2016    331
+##  7 Mozambique    2016   1685
+##  8 Sierra Leone  2016   1345
+##  9 Ethiopia      2015    662
+## 10 India         2015    384
+## # ... with 34 more rows
 ```
 
 ???
@@ -646,20 +719,26 @@ we can do that creating a vector of countries we want called `my_countries` and 
 class: animate, fadeIn, faster
 ## Chain Multiple Steps
 
-You can chain all the processing together using the pipe operator `%>%`!
+You can chain all the processing together using the pipe operator `%&gt;%`!
 --
 .pull-left[
-```{r}
+
+```r
 # with piping!
-l_data_pipe <- my_data %>% 
-  gather("Year", "Deaths", -"Country") %>% 
-  mutate(Year = as.numeric(Year)) %>% 
-  filter(Year >= 2007) %>% 
+l_data_pipe &lt;- my_data %&gt;% 
+  gather("Year", "Deaths", -"Country") %&gt;% 
+  mutate(Year = as.numeric(Year)) %&gt;% 
+  filter(Year &gt;= 2007) %&gt;% 
   filter(Country %in% my_countries)
 ```
-```{r}
+
+```r
 # `l_data` is the non-pipe method
 identical(l_data, l_data_pipe)
+```
+
+```
+## [1] TRUE
 ```
 ]
 
@@ -670,12 +749,10 @@ When I first learned about this, it literally blew my mind and has made it easie
 
 --
 .pull-right[
-<br>
-<center>
-```{r echo=FALSE, out.width = "300px", eval=params$memes}
-knitr::include_graphics("img/thumbs.gif")
-```
-<br>
+&lt;br&gt;
+&lt;center&gt;
+
+&lt;br&gt;
 ]
 
 ---
@@ -697,7 +774,7 @@ R has great built-in functionality and packages for creating plots:
  - `plotly`: [Interactive visualizations](https://plot.ly/r/)   
  - `gganimate`: [animations](https://github.com/thomasp85/gganimate#yet-another-example)
 
-<br>
+&lt;br&gt;
 Other inspiration: [R-Graph Gallery](https://www.r-graph-gallery.com/)
 ]
 
@@ -721,26 +798,7 @@ and this animation was created using the gganimate package
 ---
 class: animate, fadeIn, faster
 
-```{r fig.width = 13, fig.height = 8, echo=FALSE, warning=FALSE, fig.retina = 2, fig.align='center', message=FALSE}
-library(ggplot2)
-library(scales)
 
-p1 <- l_data %>% 
-  ggplot(aes(x = Year, y = Deaths, colour = Country)) +
-  geom_point() +
-  geom_line(size = 1.2, alpha = 0.9) +
-  scale_x_continuous(breaks = c(2007:2017)) +
-  scale_y_continuous(breaks = scales::pretty_breaks(8)) +
-  coord_cartesian(ylim = c(0, 8200)) +
-  labs(title = "Reported Malaria Deaths from 2007 to 2017",
-       caption = "Data: WHO Global Health Repository") +
-  scale_color_brewer(type = "qual", palette = 2, direction = -1, name = NULL) +
-  theme_classic(base_size = 18, base_line_size = 1) +
-  theme(legend.text = element_text(size = 16),
-         panel.grid.major = element_line(colour = "grey80", size = 0.1))
-  ggsave(plot = p1, filename = here::here("markdown", "img", "malaria.png"),
-         width = 13, height = 8, units = "in")
-```
 
 ![](img/malaria.png)
 
@@ -751,42 +809,16 @@ the code is available for this visualization in the R script that I shared for t
 
 ---
 
-```{r fig.width = 13, fig.height = 8, echo=FALSE, warning=FALSE, fig.retina = 2, fig.align='center', message=FALSE}
-if (params$ani) {
-  p <- l_data %>% 
-  ggplot(aes(x = Year, y = Deaths, colour = Country, group = Country)) +
-  geom_point() +
-  geom_line(size = 1.2, alpha = 0.9) +
-  scale_x_continuous(breaks = c(2007:2017)) +
-  scale_y_continuous(breaks = scales::pretty_breaks(8)) +
-  coord_cartesian(ylim = c(0, 8200)) +
-  labs(title = "Reported Malaria Deaths from 2007 to 2017",
-       caption = "Data: WHO Global Health Repository") +
-  scale_color_brewer(type = "qual", palette = 2, direction = -1, name = NULL) +
-  theme_classic(base_size = 18, base_line_size = 1) +
-  theme(legend.text = element_text(size = 16),
-         panel.grid.major = element_line(colour = "grey80", size = 0.1)) +
-  gganimate::transition_reveal(id = Country, along = Year)
-
-p_ani <- gganimate::animate(plot = p, width = 13*96, height = 8*96)
-
-gganimate::anim_save(here::here("markdown", "img", "malaria.gif"),
-                     animation = p_ani)
-}
-
-if (!params$ani) {
-  knitr::include_graphics("img/malaria.gif")
-}
-```
+&lt;img src="img/malaria.gif" style="display: block; margin: auto;" /&gt;
 
 ---
 name: take_away
 class: animate, fadeIn, inverse, faster, title-slide, left
 exclude: false
 
-<br>
-<br>
-<br>
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
 .pull-left[
 ## Key Messages:
 
@@ -837,7 +869,7 @@ exclude: true
  - [R for Data Science: Data Import](https://r4ds.had.co.nz/data-import.html)  
  - [R Data Import/Export Manual](https://cran.r-project.org/doc/manuals/r-release/R-data.html)  
  
-<br>
+&lt;br&gt;
 ![](img/import.png)
  ]
 
@@ -887,4 +919,99 @@ exclude: false
 - Topics that **you** would like to share or present?  
 - Datasets that **you** are interested in exploring?  
 
-<br>
+&lt;br&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"highlightSpans": false,
+"ratio": "16:9",
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
