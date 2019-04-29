@@ -43,7 +43,7 @@ Kick off first of (hopefully) more R and data-related tutorials. Looking at the 
 ---
 name: ej_intro
 class: animated, fadeIn faster
-exclude: false
+exclude: true
 
 ## About Me
 
