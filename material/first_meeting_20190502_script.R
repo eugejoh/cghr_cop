@@ -4,7 +4,7 @@
 # 2019-04-26
 # R version 3.5.1 (2018-07-02)
 
-# you can used hash or pound symbol to comment code
+# you can use hash or pound symbol to comment code
 
 # Data: WHO Global Health Repository
 # Link: http://apps.who.int/gho/data/node.main.A1367?lang=en (accessed April 12, 2019)
@@ -14,7 +14,7 @@
 #  from 2007 to 2017 in Sierra Leone, Mozambique, Ethiopia, and India?  
 
 # Load Packages
-# eg use install.packages("dplyr") to install "dplyr" package
+# eg use install.packages("dplyr") to install "dplyr" package (if not already)
 library(here) #0.1.0
 library(readr) #1.3.1
 library(dplyr) #0.7.8
@@ -22,7 +22,7 @@ library(tidyr) #0.8.1
 library(ggplot2) #3.1.0
 library(scales) # 1.0.0
 library(gganimate) #1.0.0
-
+# fyi no breaking changes with most recent versions of packages
 
 # Data Import -------------------------------------------------------------
 file_name <- "MALARIA001"
@@ -30,7 +30,7 @@ file_name <- "MALARIA001"
 the_file <- list.files(path = here::here("data"), 
                        pattern = paste0(file_name, "\\.csv"),
                        full.names = TRUE)
-# if not using RStudio or here package, use setwd() then run:
+# if not using RStudio or here package, use setwd() to set working directory then run:
 # the_file <- list.files(path = file.path(getwd(), "data"), 
 #                        pattern = paste0(file_name, "\\.csv"),
 #                        full.names = TRUE)
@@ -97,7 +97,7 @@ p1 #show plot
 
 # chaining from file path to data viz (not in presentation)
 p2 <- the_file %>% 
-  read_csv(file = ., skip = 1) %>%
+  read_csv(skip = 1) %>%
   gather("Year", "Deaths", -"Country") %>% 
   mutate(Year = as.numeric(Year)) %>% 
   filter(Year >= 2007) %>% 
