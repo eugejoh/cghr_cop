@@ -6,6 +6,7 @@ library(rmarkdown)
 memes <- FALSE
 # render markdown presentation
 rmarkdown::render(input = here::here("markdown", "first_meeting_20190502.Rmd"), 
+                  output_file = "first_meeting_20190502.html",
                   params = list(memes=memes, ani=FALSE))
 
 # move file to slides

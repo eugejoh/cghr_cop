@@ -138,7 +138,7 @@ So this is an invitation to bring your questions and insights to these meetings!
 name: objectives
 class: animated, fadeIn, faster, middle
 
-## Objectives
+## CoP Structure
 
 .large[
 1. Meet for 50 minutes  
@@ -359,7 +359,7 @@ https://ourworldindata.org/malaria#malaria-death-estimates-from-who
 ---
 class: middle, title-slide, animate, fadeIn, faster
 
-# Let's Get Started!
+# Let's Get Started with Analysis!
 
 ---
 class: middle, title-slide, animate, fadeIn, faster
@@ -693,9 +693,9 @@ class: animate, fadeIn, faster
 .pull-left[
 R has great built-in functionality and packages for creating plots:
  - Base R Graphics: [Introduction](https://rstudio-pubs-static.s3.amazonaws.com/7953_4e3efd5b9415444ca065b1167862c349.html)  
- - `ggplot2`: **Next meeting!**  
+ - `ggplot2`: **Next session!**  
  - `plotly`: [Interactive visualizations](https://plot.ly/r/)   
- - `gganimate`: [animations](https://github.com/thomasp85/gganimate#yet-another-example)
+ - `gganimate`: [Animations](https://github.com/thomasp85/gganimate#yet-another-example)
 
 <br>
 Other inspiration: [R-Graph Gallery](https://www.r-graph-gallery.com/)
@@ -788,11 +788,11 @@ exclude: false
 <br>
 <br>
 .pull-left[
-## Key Messages:
+## Key Messages
 
 #### .large[CoP = collaborative learning and sharing]  
 
-#### .large[**Data management** is important]  
+#### .large[Data management is **important**]  
 
 #### .large[R is great for *data manipulation* and *visualization*]  
 ]
@@ -879,7 +879,7 @@ exclude: true
 ---
 name: last
 class: animate, fadeIn, faster, middle
-exclude: false
+exclude:
 
 ### Administrative Notes
 
@@ -889,5 +889,5 @@ exclude: false
 
 <br>
 
-Feedback:
+### Feedback
  - [Link](https://forms.gle/TPydwzeHshCaLf4y7) (https://forms.gle/TPydwzeHshCaLf4y7)
