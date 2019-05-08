@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+name: title_slide
+class: middle, title-slide, animated, fadeIn, faster
+
+# R Community of Practice
+## Centre for Global Health Research
+
+#### 2019-06-06
+
+&lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"&gt;
+
+???
+
+---
+name: intro
+class: animate, fadeIn, faster
+
+
+.pull-left[
+## Today's Session
+
+**Outline:**
+
+{{content}}
+]
+
+--
+
+ - Data Structures (5 minutes)  
+ - Interactive Tutorial (35-40 minutes)  
+ - Practical Tips for Online Resources (5 minutes)  
+ 
+{{content}}
+--
+&lt;br&gt;
+
+**Learning Objectives:**
+{{content}}
+
+--
+ 1. Describe R data types and data structures  
+ 2. Import CSV files into R  
+ 3. Perform basic data cleaning using R  
+
+--
+
+.pull-right[
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/orly.jpg" width="400px" /&gt;
+&lt;/center&gt;
+]
+
+---
+name: data structures
+class: animate, fadeIn, faster, title-slide, inverse, middle
+
+## Data Structures
+
+
+---
+class: animate, fadeIn, faster
+
+## Data Structures
+
+.pull-left[
+.larger[**Data Types**]
+ - Numeric  
+ - Integer  
+ - Character  
+ - Logical  
+ - Factor*
+
+.small[*technically an attribute]
+{{content}}
+]
+
+--
+
+
+```r
+dbl_var &lt;- c(1, 2.5, 4.5)
+# L suffix = an integer rather than a double
+int_var &lt;- c(1L, 6L, 10L)
+# TRUE and FALSE (or T and F)
+log_var &lt;- c(TRUE, FALSE, T, F)
+chr_var &lt;- c("these are", "some strings")
+
+# examples taken from Advanced R book
+```
+{{content}}
+
+--
+
+--
+
+.pull-right[
+
+![](img/data_str.png)
+
+.small[*Information on selecting elements see [Advanced R: Subsetting](http://adv-r.had.co.nz/Subsetting.html)*]
+]
+
+---
+name: interactive_tutorial
+class: animate, fadeIn, faster, title-slide, inverse, middle
+
+## Interactive Tutorial
+
+---
+name: tut_getting_started
+class: animate, fadeIn, faster
+
+## Getting Started
+
+ 1. R and RStudio are installed and working  
+ 
+   - Check R version by running `R.version.string` in your console  
+   - If you are running R &lt; 3.5.0 please [update](https://cloud.r-project.org/)!  
+
+--
+
+ 2. Open .zip file containing files (data, R scripts) on the website  
+   - Should be a folder with *cghr_tut1.Rproj*, *cghr_tut1.R*, and */data* folder  
+
+--
+
+ 3. Open the project either by opening the `.Rproj` file or *Open Project* in top-right corner of RStudio   
+
+---
+name: resources
+class: animate, fadeIn, faster
+exclude: true
+
+## Resources on Data Types and Data Structures
+
+.pull-left[
+#### Starting Points:
+ - [Base R Cheatsheet (p. 2)](https://www.rstudio.com/wp-content/uploads/2016/05/base-r.pdf)  
+ - [Quick-R](https://www.statmethods.net/input/datatypes.html)  
+
+#### Deeper Dive: 
+ - [Software Carpentry R Website](https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures/)  
+
+#### Even Deeper Dive:
+ - [Advanced R: Data Structures](http://adv-r.had.co.nz/Data-structures.html)   
+]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"highlightSpans": false,
+"ratio": "16:9",
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

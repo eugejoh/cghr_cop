@@ -4,6 +4,7 @@
 library(here)
 library(rmarkdown)
 memes <- FALSE
+
 # render markdown presentation
 rmarkdown::render(input = here::here("markdown", "first_meeting_20190502.Rmd"), 
                   output_file = "first_meeting_20190502.html",
@@ -17,4 +18,8 @@ if (!memes) {
     overwrite = TRUE
   )
 }
+
+rmarkdown::render(input = here::here("markdown", "data_str_20190606.Rmd"),
+                  output_file = "data_str_20190606.html",
+                  params = list(memes = memes, ani=FALSE))
 
