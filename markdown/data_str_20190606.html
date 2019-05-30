@@ -4,7 +4,10 @@
     <title></title>
     <meta charset="utf-8">
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/countdown-0.2.0/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown-0.2.0/countdown.js"></script>
     <link rel="stylesheet" href="my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -12,26 +15,35 @@
 
 
 name: title_slide
-class: middle, title-slide, animated, fadeIn, faster
-
-# R Community of Practice
-## Centre for Global Health Research
-
-#### 2019-06-06
-
+class: middle, title-slide, animated, fadeIn, faster, left
 &lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"&gt;
+
+&lt;div class="my-footer"&gt;&lt;/div&gt;
+
+# Data Import and Cleaning in R
+&lt;br&gt;
+### .title-font[R Community of Practice]
+#### .title-font[Centre for Global Health Research]
+&lt;br&gt;
+.title-font[.red[**&lt;i&gt;June 6th 2019&lt;/i&gt;**]]
+&lt;br&gt;
+&lt;br&gt;
+#### .title-font[.large[Eugene Joh]]
+
+&lt;h4&gt;&lt;i class="fab fa-github fa-lg"&gt;&lt;/i&gt; .title-font[&amp;nbsp;@eugejoh]&lt;/h4&gt;
+&lt;h4&gt;&lt;i class="fab fa-twitter fa-lg"&gt;&lt;/i&gt; .title-font[&amp;nbsp;@CGHR_org]&lt;/h4&gt;  
 
 ???
 
 ---
 name: intro
-class: animate, fadeIn, faster
+class: animated, fadeIn, faster
 
 
 .pull-left[
 ## Today's Session
-
-**Outline:**
+&lt;br&gt;
+### Outline: 
 
 {{content}}
 ]
@@ -39,14 +51,14 @@ class: animate, fadeIn, faster
 --
 
  - Data Structures (5 minutes)  
- - Interactive Tutorial (35-40 minutes)  
- - Practical Tips for Online Resources (5 minutes)  
+ - Interactive Tutorial (40-45 minutes)  
+ - Useful Resources (5 minutes)  
  
 {{content}}
 --
 &lt;br&gt;
 
-**Learning Objectives:**
+### Learning Objectives:
 {{content}}
 
 --
@@ -58,25 +70,26 @@ class: animate, fadeIn, faster
 
 .pull-right[
 &lt;br&gt;
+&lt;br&gt;
 &lt;center&gt;
-&lt;img src="img/orly.jpg" width="400px" /&gt;
+
 &lt;/center&gt;
 ]
 
 ---
 name: data structures
-class: animate, fadeIn, faster, title-slide, inverse, middle
+class: animated, fadeIn, faster, title-slide, inverse, middle
 
-## Data Structures
+# Data Structures
 
 
 ---
-class: animate, fadeIn, faster
+class: animated, fadeIn, faster
 
 ## Data Structures
-
+&lt;br&gt;
 .pull-left[
-.larger[**Data Types**]
+### Data Types:
  - Numeric  
  - Integer  
  - Character  
@@ -115,47 +128,284 @@ chr_var &lt;- c("these are", "some strings")
 
 ---
 name: interactive_tutorial
-class: animate, fadeIn, faster, title-slide, inverse, middle
+class: animated, fadeIn, faster, title-slide, inverse, middle
 
-## Interactive Tutorial
+# Interactive Tutorial
 
 ---
 name: tut_getting_started
-class: animate, fadeIn, faster
+class: animated, fadeIn, faster
 
 ## Getting Started
+&lt;br&gt;
 
- 1. R and RStudio are installed and working  
+--
+ 1. Find (make a new) a friend for this session  
+
+--
+
+ 2. R and RStudio are installed and working, if not...  
  
-   - Check R version by running `R.version.string` in your console  
-   - If you are running R &lt; 3.5.0 please [update](https://cloud.r-project.org/)!  
+   - Download R: [http://www.r-project.org/](http://www.r-project.org/)  
+   - Download RStudio, the R IDE: [http://www.rstudio.com/](http://www.rstudio.com/)
 
 --
 
- 2. Open .zip file containing files (data, R scripts) on the website  
-   - Should be a folder with *cghr_tut1.Rproj*, *cghr_tut1.R*, and */data* folder  
+ 3. Download zip file with material (R Project folder)  
+   - Link: [http://bit.ly/2XcH8Ac](http://bit.ly/2XcH8Ac) *remember where you saved it!*  
 
 --
 
- 3. Open the project either by opening the `.Rproj` file or *Open Project* in top-right corner of RStudio   
+ 4. Unzip the file and open the project either by...
+   - Open the `.Rproj` file
+   - Click *Open Project* in top-right corner of RStudio   
+
+---
+name: openR
+class: animated, zoomIn, faster, title-slide, inverse, middle
+
+# Let's Get Started!
+
+
+
+---
+name: start
+class: animated, fadeIn, faster
+
+## Open RStudio
+&lt;br&gt;
+#### Steps:  
+ 1. Identify the four IDE Panels  
+ 2. Browse `messy_data_tutorial` project folder  
+ 3. Create a new R script and save it in the project folder  
+
+&lt;br&gt;
+
+```
+## |messy_data_tutorial
+```
+
+```
+## -- 00_install_pkgs.R
+## -- data
+##    |__messy_data_01.csv
+##    |__messy_data_02.csv
+##    |__messy_data_03.csv
+## -- messy_data_tutorial.Rproj
+## -- R
+##    |__00_gen_messy_data.R
+##    |__01_eda.R
+##    |__02_clean_proc.R
+```
+
+---
+name: data_import
+class: animated, fadeIn, faster
+
+## Data Import
+&lt;br&gt;
+#### Steps:  
+ 1. Load packages  
+ 2. Identify file path for data (.csv files)  
+ 3. Import the .csv files into R  
+ 4. Assign imported .csv files as `data1`, `data2`, `data3`  
+ 5. View content in data frames
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+#### Useful Functions:  
+ - `library()`
+ - `list.files()`, `getwd()`, `here()`  
+ - `read_csv()`, `read_delim()`  
+ - `head()`, `tail()`, `glimpse()`, `summary()`  
+
+---
+name: tasks
+class: animated, fadeIn, faster
+
+.pull-left[
+## Interactive Coding
+&lt;br&gt;
+
+{{content}}
+
+]
+
+--
+
+ - **Example** of a task using `data1.csv`  
+
+ - **Your turn** to apply similar task on `data2.csv`  
+
+ - Try a function -&gt; run the code -&gt; see the output  
+ 
+{{content}}
+--
+
+--
+
+.pull-right[
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/orly.jpg" width="400px" /&gt;
+&lt;/center&gt;
+
+]
+
+---
+name: task1
+class: animated, fadeIn, faster, middle
+
+## Task 1:
+&lt;br&gt;
+#### Convert `age` to an integer type as a new variable `age_int`
+&lt;br&gt;
+
+<div class="countdown" id="timer_5cef4518" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
+<code><span class="digits minutes">03</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+</div>
+
+---
+name: task2
+class: animated, fadeIn, faster, middle
+
+## Task 2:
+&lt;br&gt;
+#### Keep all observations when there is a missing value for `immune_status`
+&lt;br&gt;
+
+<div class="countdown" id="timer_5cef46c0" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
+<code><span class="digits minutes">03</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+</div>
+
+---
+name: task3
+class: animated, fadeIn, faster, middle
+
+## Task 3:
+&lt;br&gt;
+#### Separate `area` into new variables called `location` and `city`
+&lt;br&gt;
+
+<div class="countdown" id="timer_5cef4779" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
+<code><span class="digits minutes">03</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+</div>
+
+
+---
+name: task4
+class: animated, fadeIn, faster, middle
+
+## Task 4:
+&lt;br&gt;
+#### Create a binary variable for `5-9` and `Not 5-9` age groups 
+&lt;br&gt;
+
+<div class="countdown" id="timer_5cef46f0" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
+<code><span class="digits minutes">04</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+</div>
+
+---
+name: task5
+class: animated, fadeIn, faster, middle
+
+## Task 5:
+&lt;br&gt;
+#### Standardize sex variable to “male” and “female”, *hint: use `case_when()`*)
+&lt;br&gt;
+
+<div class="countdown" id="timer_5cef483c" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
+<code><span class="digits minutes">05</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+</div>
+
+---
+name: task5
+class: animated, fadeIn, faster, middle
+exclude: no
+
+## Comprehensive Exercise:
+&lt;br&gt;
+#### 1. Create a new numeric variable for the serum IgM value  
+#### 2. Separate units (mg, dL) into two new variables (numerator, denominator)  
+#### 3. Create categorical variable for low/high serum IgM (high is greater or equal to 200mg/dL)  
+&lt;br&gt;
+
+<div class="countdown" id="timer_5cef48cc" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
+<code><span class="digits minutes">10</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+</div>
 
 ---
 name: resources
-class: animate, fadeIn, faster
-exclude: true
+class: animated, fadeIn, faster, title-slide, inverse, middle
 
-## Resources on Data Types and Data Structures
+# Resources 
+
+---
+name: resources
+class: animated, fadeIn, faster
+exclude: false
+
+## Data Types and Data Structures
+&lt;br&gt;
 
 .pull-left[
 #### Starting Points:
  - [Base R Cheatsheet (p. 2)](https://www.rstudio.com/wp-content/uploads/2016/05/base-r.pdf)  
- - [Quick-R](https://www.statmethods.net/input/datatypes.html)  
+ - [R for Data Science: Vectors Chapter](https://r4ds.had.co.nz/vectors.html)  
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="https://d33wubrfki0l68.cloudfront.net/b88ef926a004b0fce72b2526b0b5c4413666a4cb/24a30/cover.png" width="220px" /&gt;
 
-#### Deeper Dive: 
+&lt;/center&gt;
+]
+
+.pull-right[
+#### Deeper Dive:
  - [Software Carpentry R Website](https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures/)  
+ - [Advanced R: Data Structures Chapter](http://adv-r.had.co.nz/Data-structures.html)   
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="https://d33wubrfki0l68.cloudfront.net/565916198b0be51bf88b36f94b80c7ea67cafe7c/7f70b/cover.png" width="220px" /&gt;
+&lt;/center&gt;
+]
 
-#### Even Deeper Dive:
- - [Advanced R: Data Structures](http://adv-r.had.co.nz/Data-structures.html)   
+---
+name: data_import
+class: animated, fadeIn, faster
+exclude: false
+
+## Data Import Packages
+&lt;br&gt;
+.pull-left[
+#### Delimited Text:
+ - `readr` [package](https://readr.tidyverse.org/) 
+ - `fread()` from [`data.table` package](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)  
+
+
+#### Excel:
+ - `readxl` [package](https://readxl.tidyverse.org/)  
+ - `xlsx` [package](http://www.sthda.com/english/wiki/r-xlsx-package-a-quick-start-guide-to-manipulate-excel-files-in-r)  
+ - `openxlsx` [package](https://cran.r-project.org/web/packages/openxlsx/index.html)
+
+ 
+#### SAS, SPSS, Stata, Minitab:
+ - `haven` [package](https://haven.tidyverse.org/)  
+ - `foreign` [package](https://cran.r-project.org/web/packages/foreign/index.html)  
+]
+
+.pull-right[
+
+#### Databases (PostgreSQL, MySQL):
+ - `DBI` [package](https://db.rstudio.com/dbi/)  
+ - `Rpostgres` [package](https://github.com/r-dbi/RPostgres)  
+ - `RMySql` [package](https://cran.r-project.org/web/packages/RMySQL/index.html)  
+ - `RMariaDB` [package](https://cran.r-project.org/web/packages/RMariaDB/index.html)  
+ 
+&lt;br&gt;
+
+&lt;img src="img/import.png" width="500px" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

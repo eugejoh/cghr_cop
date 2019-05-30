@@ -2,6 +2,10 @@
                               @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
                             @import url(https://fonts.googleapis.com/css?family=Open+Sans);
                             
+                            @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+                            
+                            @import url('https://fonts.googleapis.com/css?family=Raleway');
+                            
                             @font-face {
                               font-family: 'Open Sans';
                               src: url('fonts/OpenSans-Regular.ttf') format('truetype');
@@ -10,6 +14,11 @@
                             @font-face {
                               font-family: 'Roboto Condensed';
                               src: url('fonts/RobotoCondensed-Regular.ttf') format('truetype');
+                            }
+                            
+                            @font-face {
+                              font-family: 'Source Sans Pro';
+                              src: url('fonts/SourceSansPro-Regular.ttf') format('truetype');
                             }
                             
                             /*body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif; } */
@@ -58,7 +67,16 @@
                                     background-color: #1C1D19;
                                       color: #d6d6d6;
                                       text-shadow: 0 0 20px #333;
-                                    text-align: center
+                                      text-align: center
+                                  }
+                                  
+                                  .title-slide h1, h2, h3, h4 {
+                                    margin-bottom: 0.1em;
+                                    line-height: 0.4em;
+                                  }
+                                  
+                                  .title-slide a {
+                                    color: #d6d6d6;
                                   }
                                 
                                 .title-slide .remark-slide-number {
@@ -71,7 +89,7 @@
                                 
                                 
                                 .red {
-                                  color: 'red';
+                                  color: #DF0007;
                                 }
                                 
                                 img {
@@ -121,3 +139,27 @@
                                     fade {
                                       color: #D3D3D3;
                                     }
+                                .title-font {
+                                  font-family: 'Source Sans Pro', sans-serif;
+                                }
+                                
+                                div.my-footer {
+    position: absolute;
+    bottom: 70px;
+    left:  950px;
+    height: 160px;
+    width: 160px;
+    background-repeat: no-repeat;
+    background-image: url("img/CGHR logo L.png");
+}
+
+.my-logo-left {
+    position: absolute;
+    top: 15px;
+    right:   15px;
+    height: 40px;
+    width: 120px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("img/CGHR logo L.png");
+}
