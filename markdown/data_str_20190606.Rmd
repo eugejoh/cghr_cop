@@ -36,7 +36,7 @@ class: middle, title-slide, animated, fadeIn, faster, left
 ### .title-font[R Community of Practice]
 #### .title-font[Centre for Global Health Research]
 <br>
-.title-font[.red[**<i>June 6th 2019</i>**]]
+.title-font[.red[**<i>June 7th 2019</i>**]]
 <br>
 <br>
 #### .title-font[.large[Eugene Joh]]
@@ -93,13 +93,12 @@ knitr::include_graphics("img/first_program.png")
 name: data structures
 class: animated, fadeIn, faster, title-slide, inverse, middle
 
-# Data Structures
+# Data Types and Structures
 
 
 ---
 class: animated, fadeIn, faster
 
-## Data Structures
 <br>
 .pull-left[
 ### Data Types:
@@ -132,7 +131,7 @@ chr_var <- c("these are", "some strings")
 --
 
 .pull-right[
-
+### Data Structures:
 ![](img/data_str.png)
 
 .small[*Information on selecting elements see [Advanced R: Subsetting](http://adv-r.had.co.nz/Subsetting.html)*]
@@ -152,7 +151,7 @@ class: animated, fadeIn, faster
 <br>
 
 --
- 1. Find (make a new) a friend for this session  
+ 1. Find a friend for this session  
 
 --
 
@@ -216,9 +215,9 @@ class: animated, fadeIn, faster
  3. Create a new R script and save it in the project folder  
 
 <br>
-```{r echo=FALSE}
+```{r eval=FALSE, echo=FALSE}
 cat("|messy_data_tutorial")
-twee("/Users/eugenejoh/GitHub/messy_data_tutorial/")
+twee("/Users/eugenejoh/GitHub/messy_data_tutorial/")0
 ```
 
 ---
@@ -258,6 +257,8 @@ class: animated, fadeIn, faster
 
 --
 
+#### Format:
+
  - **Example** of a task using `data1.csv`  
 
  - **Your turn** to apply similar task on `data2.csv`  
@@ -267,12 +268,23 @@ class: animated, fadeIn, faster
 {{content}}
 --
 
+<br>
+
+#### Tips:
+
+ - Use <b>Google, StackOverflow, Forums, etc.</b>  
+ 
+ - Use `?` or `??` in the console to open <b>R Documentation</b>  
+ 
+{{content}}
+--
+
 --
 
 .pull-right[
 <br>
 <center>
-```{r echo=FALSE, out.width = "400px", eval=params$memes}
+```{r echo=FALSE, out.width = "400px", eval=TRUE}
 knitr::include_graphics("img/orly.jpg")
 ```
 </center>
@@ -346,7 +358,7 @@ class: animated, fadeIn, faster, middle
 
 ## Task 4:
 <br>
-#### Create a binary variable for `5-9` and `Not 5-9` age groups 
+#### Create a binary variable for `5-9` and Not `5-9` age groups 
 <br>
 
 ```{r echo=FALSE}
@@ -366,7 +378,7 @@ class: animated, fadeIn, faster, middle
 
 ## Task 5:
 <br>
-#### Standardize sex variable to “male” and “female”, *hint: use `case_when()`*)
+#### Standardize sex variable to `male` and `female` .small[ *hint: use `case_when()`*]
 <br>
 
 ```{r echo=FALSE}

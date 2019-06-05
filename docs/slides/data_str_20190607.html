@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>data_str_20190606.utf8.md</title>
     <meta charset="utf-8">
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/countdown-0.2.0/countdown.css" rel="stylesheet" />
-    <script src="libs/countdown-0.2.0/countdown.js"></script>
+    <link href="libs/countdown-0.3.3/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown-0.3.3/countdown.js"></script>
     <link rel="stylesheet" href="my-theme.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" type="text/css" />
+    <link rel="stylesheet" href="https:\\cdnjs.cloudflare.com\ajax\libs\animate.css\3.7.0\animate.min.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -25,7 +25,7 @@ class: middle, title-slide, animated, fadeIn, faster, left
 ### .title-font[R Community of Practice]
 #### .title-font[Centre for Global Health Research]
 &lt;br&gt;
-.title-font[.red[**&lt;i&gt;June 6th 2019&lt;/i&gt;**]]
+.title-font[.red[**&lt;i&gt;June 7th 2019&lt;/i&gt;**]]
 &lt;br&gt;
 &lt;br&gt;
 #### .title-font[.large[Eugene Joh]]
@@ -80,13 +80,12 @@ class: animated, fadeIn, faster
 name: data structures
 class: animated, fadeIn, faster, title-slide, inverse, middle
 
-# Data Structures
+# Data Types and Structures
 
 
 ---
 class: animated, fadeIn, faster
 
-## Data Structures
 &lt;br&gt;
 .pull-left[
 ### Data Types:
@@ -120,7 +119,7 @@ chr_var &lt;- c("these are", "some strings")
 --
 
 .pull-right[
-
+### Data Structures:
 ![](img/data_str.png)
 
 .small[*Information on selecting elements see [Advanced R: Subsetting](http://adv-r.had.co.nz/Subsetting.html)*]
@@ -140,7 +139,7 @@ class: animated, fadeIn, faster
 &lt;br&gt;
 
 --
- 1. Find (make a new) a friend for this session  
+ 1. Find a friend for this session  
 
 --
 
@@ -181,22 +180,6 @@ class: animated, fadeIn, faster
 
 &lt;br&gt;
 
-```
-## |messy_data_tutorial
-```
-
-```
-## -- 00_install_pkgs.R
-## -- data
-##    |__messy_data_01.csv
-##    |__messy_data_02.csv
-##    |__messy_data_03.csv
-## -- messy_data_tutorial.Rproj
-## -- R
-##    |__00_gen_messy_data.R
-##    |__01_eda.R
-##    |__02_clean_proc.R
-```
 
 ---
 name: data_import
@@ -235,11 +218,24 @@ class: animated, fadeIn, faster
 
 --
 
+#### Format:
+
  - **Example** of a task using `data1.csv`  
 
  - **Your turn** to apply similar task on `data2.csv`  
 
  - Try a function -&gt; run the code -&gt; see the output  
+ 
+{{content}}
+--
+
+&lt;br&gt;
+
+#### Tips:
+
+ - Use &lt;b&gt;Google, StackOverflow, Forums, etc.&lt;/b&gt;  
+ 
+ - Use `?` or `??` in the console to open &lt;b&gt;R Documentation&lt;/b&gt;  
  
 {{content}}
 --
@@ -263,8 +259,8 @@ class: animated, fadeIn, faster, middle
 #### Convert `age` to an integer type as a new variable `age_int`
 &lt;br&gt;
 
-<div class="countdown" id="timer_5cef4619" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
-<code><span class="digits minutes">03</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+<div class="countdown" id="timer_5cf7e99d" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
@@ -276,8 +272,8 @@ class: animated, fadeIn, faster, middle
 #### Keep all observations when there is a missing value for `immune_status`
 &lt;br&gt;
 
-<div class="countdown" id="timer_5cef48e9" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
-<code><span class="digits minutes">03</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+<div class="countdown" id="timer_5cf7eb31" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
@@ -289,8 +285,8 @@ class: animated, fadeIn, faster, middle
 #### Separate `area` into new variables called `location` and `city`
 &lt;br&gt;
 
-<div class="countdown" id="timer_5cef46ea" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
-<code><span class="digits minutes">03</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+<div class="countdown" id="timer_5cf7e895" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 
@@ -300,11 +296,11 @@ class: animated, fadeIn, faster, middle
 
 ## Task 4:
 &lt;br&gt;
-#### Create a binary variable for `5-9` and `Not 5-9` age groups 
+#### Create a binary variable for `5-9` and Not `5-9` age groups 
 &lt;br&gt;
 
-<div class="countdown" id="timer_5cef4747" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
-<code><span class="digits minutes">04</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+<div class="countdown" id="timer_5cf7e8f3" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
@@ -313,11 +309,11 @@ class: animated, fadeIn, faster, middle
 
 ## Task 5:
 &lt;br&gt;
-#### Standardize sex variable to “male” and “female”, *hint: use `case_when()`*)
+#### Standardize sex variable to `male` and `female` .small[ *hint: use `case_when()`*]
 &lt;br&gt;
 
-<div class="countdown" id="timer_5cef4934" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
-<code><span class="digits minutes">05</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+<div class="countdown" id="timer_5cf7e87d" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
@@ -332,8 +328,8 @@ exclude: no
 #### 3. Create categorical variable for low/high serum IgM (high is greater or equal to 200mg/dL)  
 &lt;br&gt;
 
-<div class="countdown" id="timer_5cef458c" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true">
-<code><span class="digits minutes">10</span><span class="digits colon">:</span><span class="digits seconds">00</span></code>
+<div class="countdown" id="timer_5cf7ea41" style="right:0;bottom:0;left:0;margin:5%;padding:15px;font-size:2em;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
@@ -408,6 +404,7 @@ exclude: false
 &lt;img src="img/import.png" width="500px" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]
     </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script src="https://platform.twitter.com/widgets.js"></script>
 <script>var slideshow = remark.create({
@@ -421,11 +418,41 @@ exclude: false
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function() {
-  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
 })();</script>
 
 <script>
@@ -440,8 +467,8 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
 </script>
 
 <script>
-(function() {
-  var i, text, code, codes = document.getElementsByTagName('code');
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
   for (i = 0; i < codes.length;) {
     code = codes[i];
     if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
@@ -455,7 +482,8 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     i++;
   }
-})();
+};
+slideshow._releaseMath(document);
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

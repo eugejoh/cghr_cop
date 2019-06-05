@@ -20,6 +20,6 @@ if (!memes) {
 }
 
 rmarkdown::render(input = here::here("markdown", "data_str_20190606.Rmd"),
-                  output_file = "data_str_20190606.html",
-                  params = list(memes = memes, ani=FALSE))
+                  output_file = "data_str_20190607.html",
+                  params = list(memes = memes, ani = FALSE))
 
